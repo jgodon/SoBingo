@@ -1,0 +1,6 @@
+framework module NeoCoordinator {
+  umbrella header "NeoCoordinator-umbrella.h"
+
+  export *
+  module * { export * }
+}
