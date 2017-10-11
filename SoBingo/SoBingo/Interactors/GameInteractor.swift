@@ -11,12 +11,14 @@ import RxSwift
 
 protocol GameInteractorType {
   
+  var nbWords: Int { get }
+  
   func generateWords() -> Observable<[String]>
 }
 
 struct GameInteractor: GameInteractorType {
   
-  private let nbWords = 6
+  let nbWords = 6
   
   private let words: [String] = ["appétence",
                        "absolument",
@@ -25,7 +27,8 @@ struct GameInteractor: GameInteractorType {
                        "récurrence d’usage",
                        "récence",
                        "open bar",
-                       "point à craquer"]
+                       "point à craquer",
+                       "au fil de l'eau"]
   
   func generateWords() -> Observable<[String]>{
     
@@ -51,7 +54,7 @@ extension MutableCollection where Index == Int {
     for i in startIndex ..< endIndex - 1 {
       let j = Int(arc4random_uniform(UInt32(endIndex - i))) + i
       if i != j {
-        swap(&self[i], &self[j])
+        swapAt(i, j)
       }
     }
   }

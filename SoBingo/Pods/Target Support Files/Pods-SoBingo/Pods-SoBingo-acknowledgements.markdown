@@ -164,9 +164,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-## RxOptional
+## RxGesture
 
-Copyright (c) 2016 Thane Gill <me@thanegill.com>
+Copyright (c) 2016 Marin Todorov <marin@underplot.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

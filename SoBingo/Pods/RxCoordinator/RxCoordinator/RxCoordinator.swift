@@ -44,7 +44,7 @@ public extension RxCoordinator {
     return CocoaAction { [weak self] _ in
       return Observable.create { [weak self] (observer) in
         try? self?.start() { _ in
-          observer.onNext()
+          observer.onNext(())
           observer.onCompleted()
         }
         return Disposables.create()
@@ -59,7 +59,7 @@ public extension RxCoordinator {
     return CocoaAction { [weak self] _ in
       return Observable.create { [weak self] (observer) in
         self?.stopFromParent({ _ in
-          observer.onNext()
+          observer.onNext(())
           observer.onCompleted()
         })
         return Disposables.create()
@@ -74,7 +74,7 @@ public extension RxCoordinator {
     return CocoaAction { [weak self] in
       return Observable.create { [weak self] (observer) in
         self?.startChildCoordinator(forConfiguration: config, callback: { coordinator in
-          observer.onNext()
+          observer.onNext(())
           observer.onCompleted()
         })
         return Disposables.create()
@@ -90,7 +90,7 @@ public extension RxCoordinator {
       return Observable.create { [weak self, weak coordinator] (observer) in
         if let coordinator = coordinator {
           self?.stopChild(forCoordinator: coordinator, callback: { coordinator in
-            observer.onNext()
+            observer.onNext(())
             observer.onCompleted()
           })
         }

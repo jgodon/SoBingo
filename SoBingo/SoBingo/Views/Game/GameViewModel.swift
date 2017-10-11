@@ -15,7 +15,8 @@ protocol GameViewModelType {
   
   // OUTPUT
   
-  var words: Driver<[String]> { get }
+  var nbWords: Int { get }
+  var words: Driver<[BingoCellViewModelType]> { get }  
   
   // ACTIONS
   
@@ -24,15 +25,24 @@ protocol GameViewModelType {
 
 struct GameViewModel: GameViewModelType {
   
+  private let gameInteractor: GameInteractorType
+  
   var resetWords: Action<Void, [String]>
   
-  var words: Driver<[String]> {
+  var nbWords: Int {
+    return gameInteractor.nbWords
+  }
+  
+  var words: Driver<[BingoCellViewModelType]> {
     return resetWords.elements
+      .map({ $0.map({ BingoCellViewModel(word: $0) }) })
       .asDriver(onErrorJustReturn: [])
   }
   
   init(gameInteractor: GameInteractorType) {
 
+    self.gameInteractor = gameInteractor
+    
     resetWords = Action<Void, [String]> {
       gameInteractor.generateWords()
     }    
