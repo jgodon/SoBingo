@@ -33,9 +33,9 @@ struct GameViewModel: GameViewModelType {
   
   var wonAction: CocoaAction? {
     didSet {
-//      _words.asObservable()
-//        .subscribe(onNext: setupValidation)
-//        .disposed(by: disposeBag)
+      _words.asObservable()
+        .subscribe(onNext: setupValidation)
+        .disposed(by: disposeBag)
     }
   }
   
