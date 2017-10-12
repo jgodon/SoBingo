@@ -33,9 +33,9 @@ struct GameViewModel: GameViewModelType {
   
   var wonAction: CocoaAction? {
     didSet {
-      _words.asObservable()
-        .subscribe(onNext: setupValidation)
-        .disposed(by: disposeBag)
+//      _words.asObservable()
+//        .subscribe(onNext: setupValidation)
+//        .disposed(by: disposeBag)
     }
   }
   
@@ -45,10 +45,10 @@ struct GameViewModel: GameViewModelType {
     return gameInteractor.nbWords
   }
   
-  private let _words = Variable<[BingoCellViewModelType]>([])
+  private let _words = PublishSubject<[BingoCellViewModelType]>()
   
   var words: Driver<[BingoCellViewModelType]> {
-    return _words.asDriver()
+    return _words.asDriver(onErrorJustReturn: [])
   }
   
   init(gameInteractor: GameInteractorType) {

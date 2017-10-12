@@ -26,6 +26,8 @@
 		256D71831F8E95420068A177 /* SuccessCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D71821F8E95420068A177 /* SuccessCoordinator.swift */; };
 		256D71861F8E95820068A177 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D71851F8E95820068A177 /* SuccessViewController.swift */; };
 		256D71881F8E95960068A177 /* SuccessViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 256D71871F8E95960068A177 /* SuccessViewController.storyboard */; };
+		257CCAF11F8FA043005B138A /* BingoFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257CCAF01F8FA043005B138A /* BingoFooterView.swift */; };
+		257CCAF31F8FA052005B138A /* BingoFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 257CCAF21F8FA052005B138A /* BingoFooterView.xib */; };
 		64F025BA88EC1F972722B1F6 /* Pods_SoBingo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D702DFE9D8A4EE8EE7CA50D7 /* Pods_SoBingo.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		256D71821F8E95420068A177 /* SuccessCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SuccessCoordinator.swift; path = Coordinators/SuccessCoordinator.swift; sourceTree = "<group>"; };
 		256D71851F8E95820068A177 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SuccessViewController.swift; path = Views/Success/SuccessViewController.swift; sourceTree = "<group>"; };
 		256D71871F8E95960068A177 /* SuccessViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = SuccessViewController.storyboard; path = Views/Success/SuccessViewController.storyboard; sourceTree = "<group>"; };
+		257CCAF01F8FA043005B138A /* BingoFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BingoFooterView.swift; path = Views/Game/Subviews/BingoFooter/BingoFooterView.swift; sourceTree = "<group>"; };
+		257CCAF21F8FA052005B138A /* BingoFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BingoFooterView.xib; path = Views/Game/Subviews/BingoFooter/BingoFooterView.xib; sourceTree = "<group>"; };
 		84939F7D1423CAF08090993F /* Pods-SoBingo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoBingo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SoBingo/Pods-SoBingo.release.xcconfig"; sourceTree = "<group>"; };
 		D702DFE9D8A4EE8EE7CA50D7 /* Pods_SoBingo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoBingo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECDB81902273E2454640CA94 /* Pods-SoBingo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoBingo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoBingo/Pods-SoBingo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 			children = (
 				252C77581F8D321B00E7134E /* BingoHeader */,
 				252C77591F8D322C00E7134E /* BingoCell */,
+				257CCAEF1F8F9CD9005B138A /* BingoFooter */,
 			);
 			name = Subviews;
 			sourceTree = "<group>";
@@ -191,6 +196,15 @@
 				256D71871F8E95960068A177 /* SuccessViewController.storyboard */,
 			);
 			name = Success;
+			sourceTree = "<group>";
+		};
+		257CCAEF1F8F9CD9005B138A /* BingoFooter */ = {
+			isa = PBXGroup;
+			children = (
+				257CCAF01F8FA043005B138A /* BingoFooterView.swift */,
+				257CCAF21F8FA052005B138A /* BingoFooterView.xib */,
+			);
+			name = BingoFooter;
 			sourceTree = "<group>";
 		};
 		67D929B09F1ECB51CEE16AB7 /* Pods */ = {
@@ -275,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				252C773D1F8D2F2100E7134E /* LaunchScreen.storyboard in Resources */,
+				257CCAF31F8FA052005B138A /* BingoFooterView.xib in Resources */,
 				252C77541F8D317300E7134E /* GameViewController.storyboard in Resources */,
 				25364A681F8E0D900022F398 /* BingoCell.xib in Resources */,
 				252C773A1F8D2F2100E7134E /* Assets.xcassets in Resources */,
@@ -376,6 +391,7 @@
 				252C77491F8D30C300E7134E /* MainBuilder.swift in Sources */,
 				252C775C1F8D325000E7134E /* GameInteractor.swift in Sources */,
 				252C77461F8D308700E7134E /* Reusable+Swinject.swift in Sources */,
+				257CCAF11F8FA043005B138A /* BingoFooterView.swift in Sources */,
 				252C77561F8D318800E7134E /* GameViewModel.swift in Sources */,
 				252C774C1F8D310F00E7134E /* AppCoordinator.swift in Sources */,
 				252C77331F8D2F2100E7134E /* AppDelegate.swift in Sources */,

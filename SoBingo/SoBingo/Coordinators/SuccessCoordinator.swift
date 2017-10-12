@@ -22,7 +22,8 @@ final class SuccessCoordinator: NavigationCoordinator, RxCoordinator {
     
     let builder: Builder = try! context.value()
     let controller = SuccessViewController.instantiate(andInject: builder.container)
-    self.controller = controller
+    self.controller = controller    
+    controller.navigationItem.hidesBackButton = true
   }
 }
 

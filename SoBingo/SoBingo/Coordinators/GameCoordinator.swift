@@ -24,6 +24,8 @@ final class GameCoordinator: NavigationCoordinator, RxCoordinator {
     let controller = GameViewController.instantiate(andInject: builder.container)
     self.controller = controller
     let config = CoordinatorConfiguration(type: SuccessCoordinator.self)
-    controller.viewModel.wonAction = startRxChildAction(forConfiguration: config)        
+    controller.viewModel.wonAction = startRxChildAction(forConfiguration: config)
+    
+    navigationController.navigationBar.isHidden = true
   }
 }
