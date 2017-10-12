@@ -12,6 +12,7 @@ target 'SoBingo' do
   pod 'RxDataSources', git: 'https://github.com/RxSwiftCommunity/RxDataSources.git', branch: 'swift4.0'
   pod 'Action', git: 'https://github.com/RxSwiftCommunity/Action.git', branch: 'master'
   pod 'RxGesture'
+  pod 'RxOptional'
   pod 'NeoCoordinator'
   pod 'RxCoordinator'
   pod 'Reusable'

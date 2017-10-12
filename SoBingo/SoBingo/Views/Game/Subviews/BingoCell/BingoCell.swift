@@ -28,7 +28,7 @@ final class BingoCell: UICollectionViewCell, NibReusable {
     
     viewModel.word
       .drive(wordLabel.rx.text)
-      .disposed(by: disposeBag)
+      .disposed(by: disposeBag)        
     
     rx.gesture(type: .tap)
       .withLatestFrom(viewModel.selected)

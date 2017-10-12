@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 import Action
+import RxOptional
 
 protocol GameViewModelType {
   
@@ -20,6 +21,7 @@ protocol GameViewModelType {
   
   // ACTIONS
   
+  var wonAction: CocoaAction? { get set }
   var resetWords: Action<Void, [String]> { get }
 }
 
@@ -29,22 +31,55 @@ struct GameViewModel: GameViewModelType {
   
   var resetWords: Action<Void, [String]>
   
+  var wonAction: CocoaAction? {
+    didSet {
+      _words.asObservable()
+        .subscribe(onNext: setupValidation)
+        .disposed(by: disposeBag)
+    }
+  }
+  
+  let disposeBag = DisposeBag()
+  
   var nbWords: Int {
     return gameInteractor.nbWords
   }
   
+  private let _words = Variable<[BingoCellViewModelType]>([])
+  
   var words: Driver<[BingoCellViewModelType]> {
-    return resetWords.elements
-      .map({ $0.map({ BingoCellViewModel(word: $0) }) })
-      .asDriver(onErrorJustReturn: [])
+    return _words.asDriver()
   }
   
   init(gameInteractor: GameInteractorType) {
-
+    
     self.gameInteractor = gameInteractor
     
     resetWords = Action<Void, [String]> {
       gameInteractor.generateWords()
-    }    
+    }
+    
+    resetWords.elements
+      .map({ (words) -> [BingoCellViewModelType] in words.map({ BingoCellViewModel(word: $0) }) })
+      .bind(to: _words)
+      .disposed(by: disposeBag)
+  }
+  
+  func setupValidation(_ viewModels: [BingoCellViewModelType]) {
+    
+    let validArray = viewModels.map({ $0.selected.asObservable() })
+    
+    if let wonAction = wonAction {
+      Observable.combineLatest(validArray)
+        .map({
+          $0.reduce(true, { res, value in
+            return res && value
+          })
+        })
+        .filter({ $0 })
+        .map({ _ in return })
+        .bind(to: wonAction.inputs)
+        .disposed(by: self.disposeBag)
+    }
   }
 }

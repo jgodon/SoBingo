@@ -23,6 +23,9 @@
 		25364A661F8E0D850022F398 /* BingoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25364A651F8E0D850022F398 /* BingoCell.swift */; };
 		25364A681F8E0D900022F398 /* BingoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25364A671F8E0D900022F398 /* BingoCell.xib */; };
 		25364A6A1F8E0EDE0022F398 /* BingoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25364A691F8E0EDE0022F398 /* BingoCellViewModel.swift */; };
+		256D71831F8E95420068A177 /* SuccessCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D71821F8E95420068A177 /* SuccessCoordinator.swift */; };
+		256D71861F8E95820068A177 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D71851F8E95820068A177 /* SuccessViewController.swift */; };
+		256D71881F8E95960068A177 /* SuccessViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 256D71871F8E95960068A177 /* SuccessViewController.storyboard */; };
 		64F025BA88EC1F972722B1F6 /* Pods_SoBingo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D702DFE9D8A4EE8EE7CA50D7 /* Pods_SoBingo.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +48,9 @@
 		25364A651F8E0D850022F398 /* BingoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BingoCell.swift; path = Views/Game/Subviews/BingoCell/BingoCell.swift; sourceTree = "<group>"; };
 		25364A671F8E0D900022F398 /* BingoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BingoCell.xib; path = Views/Game/Subviews/BingoCell/BingoCell.xib; sourceTree = "<group>"; };
 		25364A691F8E0EDE0022F398 /* BingoCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BingoCellViewModel.swift; path = Views/Game/Subviews/BingoCell/BingoCellViewModel.swift; sourceTree = "<group>"; };
+		256D71821F8E95420068A177 /* SuccessCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SuccessCoordinator.swift; path = Coordinators/SuccessCoordinator.swift; sourceTree = "<group>"; };
+		256D71851F8E95820068A177 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SuccessViewController.swift; path = Views/Success/SuccessViewController.swift; sourceTree = "<group>"; };
+		256D71871F8E95960068A177 /* SuccessViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = SuccessViewController.storyboard; path = Views/Success/SuccessViewController.storyboard; sourceTree = "<group>"; };
 		84939F7D1423CAF08090993F /* Pods-SoBingo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoBingo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SoBingo/Pods-SoBingo.release.xcconfig"; sourceTree = "<group>"; };
 		D702DFE9D8A4EE8EE7CA50D7 /* Pods_SoBingo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoBingo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECDB81902273E2454640CA94 /* Pods-SoBingo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoBingo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoBingo/Pods-SoBingo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +123,7 @@
 			children = (
 				252C774B1F8D310F00E7134E /* AppCoordinator.swift */,
 				252C774D1F8D312D00E7134E /* GameCoordinator.swift */,
+				256D71821F8E95420068A177 /* SuccessCoordinator.swift */,
 			);
 			name = Coordinators;
 			sourceTree = "<group>";
@@ -124,6 +131,7 @@
 		252C774F1F8D314000E7134E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				256D71841F8E95660068A177 /* Success */,
 				252C77501F8D315000E7134E /* Game */,
 			);
 			name = Views;
@@ -174,6 +182,15 @@
 				252C775B1F8D325000E7134E /* GameInteractor.swift */,
 			);
 			name = Interactors;
+			sourceTree = "<group>";
+		};
+		256D71841F8E95660068A177 /* Success */ = {
+			isa = PBXGroup;
+			children = (
+				256D71851F8E95820068A177 /* SuccessViewController.swift */,
+				256D71871F8E95960068A177 /* SuccessViewController.storyboard */,
+			);
+			name = Success;
 			sourceTree = "<group>";
 		};
 		67D929B09F1ECB51CEE16AB7 /* Pods */ = {
@@ -261,6 +278,7 @@
 				252C77541F8D317300E7134E /* GameViewController.storyboard in Resources */,
 				25364A681F8E0D900022F398 /* BingoCell.xib in Resources */,
 				252C773A1F8D2F2100E7134E /* Assets.xcassets in Resources */,
+				256D71881F8E95960068A177 /* SuccessViewController.storyboard in Resources */,
 				25364A641F8E0D710022F398 /* BingoHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +334,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCoordinator/RxCoordinator.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/SwinjectAutoregistration/SwinjectAutoregistration.framework",
@@ -331,6 +350,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCoordinator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectAutoregistration.framework",
@@ -352,6 +372,7 @@
 				25364A661F8E0D850022F398 /* BingoCell.swift in Sources */,
 				25364A6A1F8E0EDE0022F398 /* BingoCellViewModel.swift in Sources */,
 				252C774E1F8D312D00E7134E /* GameCoordinator.swift in Sources */,
+				256D71831F8E95420068A177 /* SuccessCoordinator.swift in Sources */,
 				252C77491F8D30C300E7134E /* MainBuilder.swift in Sources */,
 				252C775C1F8D325000E7134E /* GameInteractor.swift in Sources */,
 				252C77461F8D308700E7134E /* Reusable+Swinject.swift in Sources */,
@@ -359,6 +380,7 @@
 				252C774C1F8D310F00E7134E /* AppCoordinator.swift in Sources */,
 				252C77331F8D2F2100E7134E /* AppDelegate.swift in Sources */,
 				25364A621F8E0D650022F398 /* BingoHeaderView.swift in Sources */,
+				256D71861F8E95820068A177 /* SuccessViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

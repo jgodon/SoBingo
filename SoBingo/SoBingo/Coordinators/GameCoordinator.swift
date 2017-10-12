@@ -23,7 +23,7 @@ final class GameCoordinator: NavigationCoordinator, RxCoordinator {
     let builder: Builder = try! context.value()
     let controller = GameViewController.instantiate(andInject: builder.container)
     self.controller = controller
-    
-    controller.navigationItem.hidesBackButton = true
+    let config = CoordinatorConfiguration(type: SuccessCoordinator.self)
+    controller.viewModel.wonAction = startRxChildAction(forConfiguration: config)        
   }
 }
