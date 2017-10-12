@@ -21,19 +21,19 @@ struct GameInteractor: GameInteractorType {
   let nbWords = 6
   
   private let words: [String] = ["appétence",
-                       "absolument",
-                       "faire sens",
-                       "adhérence",
-                       "récurrence d’usage",
-                       "récence",
-                       "open bar",
-                       "point à craquer",
-                       "au fil de l'eau"]
+                                 "absolument",
+                                 "faire sens",
+                                 "adhérence",
+                                 "récurrence d’usage",
+                                 "récence",
+                                 "open bar",
+                                 "point à craquer",
+                                 "au fil de l'eau"]
   
   func generateWords() -> Observable<[String]>{
     
     return Observable.create({ observer in
-    
+      
       var w = self.words
       w.shuffle()
       

@@ -14,7 +14,7 @@ import Reusable
 import Swinject
 import RxSwift
 
-final class SuccessCoordinator: NavigationCoordinator, RxCoordinator {
+final class SuccessCoordinator: ModalCoordinator, RxCoordinator {
   
   let disposeBag = DisposeBag()
   
@@ -24,6 +24,7 @@ final class SuccessCoordinator: NavigationCoordinator, RxCoordinator {
     let controller = SuccessViewController.instantiate(andInject: builder.container)
     self.controller = controller    
     controller.navigationItem.hidesBackButton = true
+    controller.modalTransitionStyle = .flipHorizontal
   }
 }
 
