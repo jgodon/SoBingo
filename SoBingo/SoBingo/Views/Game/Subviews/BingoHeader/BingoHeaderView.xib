@@ -18,11 +18,11 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="poI-xv-Ism">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ldz-w0-FB1">
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ldz-w0-FB1">
                             <rect key="frame" x="45" y="18" width="284" height="54"/>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.23137254901960785" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="Ldz-w0-FB1" firstAttribute="centerX" secondItem="poI-xv-Ism" secondAttribute="centerX" id="5W6-Jr-lfN"/>
                         <constraint firstAttribute="height" constant="90" id="CTX-WQ-8bw"/>
@@ -30,7 +30,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="1" green="0.26024561460000001" blue="0.27912086580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="poI-xv-Ism" firstAttribute="leading" secondItem="NO5-yk-2GH" secondAttribute="leading" id="fTc-r0-jKq"/>
                 <constraint firstAttribute="trailing" secondItem="poI-xv-Ism" secondAttribute="trailing" id="gFU-60-e7p"/>
