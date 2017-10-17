@@ -8,6 +8,7 @@
 
 import UIKit
 import NeoCoordinator
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   let builder = MainBuilder()
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    
+    try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
     
     window = UIWindow()
     let navigationController = UINavigationController()
