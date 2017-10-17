@@ -28,6 +28,11 @@ final class GameViewController: UIViewController, StoryboardBased {
     
     register()
     setup()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
     viewModel.resetWords.execute(())
   }
   

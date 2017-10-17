@@ -28,7 +28,27 @@ struct GameInteractor: GameInteractorType {
                                  "récence",
                                  "open bar",
                                  "point à craquer",
-                                 "au fil de l'eau"]
+                                 "au fil de l'eau",
+                                 "collaborateur",
+                                 "brainstormer",
+                                 "prendre le lead",
+                                 "ASAP",
+                                 "draft",
+                                 "fulltime",
+                                 "call",
+                                 "one to one",
+                                 "défriefer",
+                                 "force de proposition",
+                                 "corporate",
+                                 "process",
+                                 "validation",
+                                 "focus",
+                                 "overbooké",
+                                 "benchmark",
+                                 "axes d'améliorations",
+                                 "attentes",
+                                 "touchy",
+                                 "objectifs"]
   
   func generateWords() -> Observable<[String]>{
     

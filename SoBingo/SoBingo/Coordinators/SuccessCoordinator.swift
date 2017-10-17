@@ -24,7 +24,11 @@ final class SuccessCoordinator: ModalCoordinator, RxCoordinator {
     let controller = SuccessViewController.instantiate(andInject: builder.container)
     self.controller = controller    
     controller.navigationItem.hidesBackButton = true
+    navigationController.navigationBar.isHidden = true
     controller.modalTransitionStyle = .flipHorizontal
+    
+    let stopAction = stopRxAction
+    controller.closeAction = stopAction
   }
 }
 

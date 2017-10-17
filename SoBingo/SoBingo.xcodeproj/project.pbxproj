@@ -23,6 +23,9 @@
 		25364A661F8E0D850022F398 /* BingoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25364A651F8E0D850022F398 /* BingoCell.swift */; };
 		25364A681F8E0D900022F398 /* BingoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25364A671F8E0D900022F398 /* BingoCell.xib */; };
 		25364A6A1F8E0EDE0022F398 /* BingoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25364A691F8E0EDE0022F398 /* BingoCellViewModel.swift */; };
+		25576DC81F96077A002AAA38 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25576DC71F96077A002AAA38 /* AudioToolbox.framework */; };
+		25576DCA1F960782002AAA38 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25576DC91F960782002AAA38 /* AVFoundation.framework */; };
+		25576DCC1F960816002AAA38 /* Bingo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25576DCB1F960816002AAA38 /* Bingo.mp3 */; };
 		256D71831F8E95420068A177 /* SuccessCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D71821F8E95420068A177 /* SuccessCoordinator.swift */; };
 		256D71861F8E95820068A177 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256D71851F8E95820068A177 /* SuccessViewController.swift */; };
 		256D71881F8E95960068A177 /* SuccessViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 256D71871F8E95960068A177 /* SuccessViewController.storyboard */; };
@@ -50,6 +53,9 @@
 		25364A651F8E0D850022F398 /* BingoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BingoCell.swift; path = Views/Game/Subviews/BingoCell/BingoCell.swift; sourceTree = "<group>"; };
 		25364A671F8E0D900022F398 /* BingoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BingoCell.xib; path = Views/Game/Subviews/BingoCell/BingoCell.xib; sourceTree = "<group>"; };
 		25364A691F8E0EDE0022F398 /* BingoCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BingoCellViewModel.swift; path = Views/Game/Subviews/BingoCell/BingoCellViewModel.swift; sourceTree = "<group>"; };
+		25576DC71F96077A002AAA38 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		25576DC91F960782002AAA38 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		25576DCB1F960816002AAA38 /* Bingo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bingo.mp3; sourceTree = "<group>"; };
 		256D71821F8E95420068A177 /* SuccessCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SuccessCoordinator.swift; path = Coordinators/SuccessCoordinator.swift; sourceTree = "<group>"; };
 		256D71851F8E95820068A177 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SuccessViewController.swift; path = Views/Success/SuccessViewController.swift; sourceTree = "<group>"; };
 		256D71871F8E95960068A177 /* SuccessViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = SuccessViewController.storyboard; path = Views/Success/SuccessViewController.storyboard; sourceTree = "<group>"; };
@@ -65,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25576DCA1F960782002AAA38 /* AVFoundation.framework in Frameworks */,
+				25576DC81F96077A002AAA38 /* AudioToolbox.framework in Frameworks */,
 				64F025BA88EC1F972722B1F6 /* Pods_SoBingo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,6 +107,7 @@
 				252C775A1F8D323800E7134E /* Interactors */,
 				252C774F1F8D314000E7134E /* Views */,
 				252C77441F8D307200E7134E /* Libs */,
+				25576DCB1F960816002AAA38 /* Bingo.mp3 */,
 				252C77391F8D2F2100E7134E /* Assets.xcassets */,
 				252C773B1F8D2F2100E7134E /* LaunchScreen.storyboard */,
 				252C773E1F8D2F2100E7134E /* Info.plist */,
@@ -219,6 +228,8 @@
 		86773F11B50D2B9BD27235AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				25576DC91F960782002AAA38 /* AVFoundation.framework */,
+				25576DC71F96077A002AAA38 /* AudioToolbox.framework */,
 				D702DFE9D8A4EE8EE7CA50D7 /* Pods_SoBingo.framework */,
 			);
 			name = Frameworks;
@@ -294,6 +305,7 @@
 				25364A681F8E0D900022F398 /* BingoCell.xib in Resources */,
 				252C773A1F8D2F2100E7134E /* Assets.xcassets in Resources */,
 				256D71881F8E95960068A177 /* SuccessViewController.storyboard in Resources */,
+				25576DCC1F960816002AAA38 /* Bingo.mp3 in Resources */,
 				25364A641F8E0D710022F398 /* BingoHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
