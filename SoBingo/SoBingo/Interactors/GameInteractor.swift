@@ -48,8 +48,22 @@ struct GameInteractor: GameInteractorType {
                                  "axes d'améliorations",
                                  "attentes",
                                  "touchy",
-                                 "objectifs"]
-  
+                                 "objectifs",
+                                 "120 jours",
+                                 "roadmap",
+                                 "attente",
+                                 "chiffrage",
+                                 "en avance de phase",
+                                 "à date",
+                                 "déceptif",
+                                 "qualitatif",
+                                 "poser un point",
+                                 "caler un dej",
+                                 "ventiler",
+                                 "bienveillance"]
+
+
+
   func generateWords() -> Observable<[String]>{
     
     return Observable.create({ observer in
